@@ -1,0 +1,12 @@
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\bin\Debug\net7.0\Store.Model.deps.json
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\bin\Debug\net7.0\Store.Model.dll
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\bin\Debug\net7.0\Store.Model.pdb
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\Store.Model.csproj.AssemblyReference.cache
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\Store.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\Store.Model.AssemblyInfoInputs.cache
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\Store.Model.AssemblyInfo.cs
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\Store.Model.csproj.CoreCompileInputs.cache
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\Store.Model.dll
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\refint\Store.Model.dll
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\Store.Model.pdb
+C:\Users\z004e3de\source\repos\Store.Service\Store.Model\obj\Debug\net7.0\ref\Store.Model.dll
