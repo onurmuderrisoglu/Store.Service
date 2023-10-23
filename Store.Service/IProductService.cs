@@ -2,9 +2,9 @@
 
 namespace Store.Service
 {
-	public interface IProductsService
+	public interface IProductService
 	{
-		IEnumerable<Products> GetAll();
+		IEnumerable<Products> GetAllProducts();
 		void DeleteProduct(int id);
 		void AddProduct(Products products);
 	}
