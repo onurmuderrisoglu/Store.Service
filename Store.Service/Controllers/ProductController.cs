@@ -8,8 +8,8 @@ namespace Store.Service.Controllers
 	[ApiController]
 	public class ProductController : ControllerBase
 	{
-		private IProductsService _productsService;
-		public ProductController(IProductsService productsService)
+		private IProductService _productsService;
+		public ProductController(IProductService productsService)
 		{
 			_productsService = productsService;
 		}
