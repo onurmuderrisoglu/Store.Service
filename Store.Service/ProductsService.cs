@@ -3,10 +3,10 @@ using Store.Model;
 
 namespace Store.Service
 {
-	public class ProductsService : IProductsService
+	public class ProductService : IProductService
 	{
 		private StoreDbContext _dbContext;
-		public ProductsService(StoreDbContext dbContext)
+		public ProductService(StoreDbContext dbContext)
 		{
 			_dbContext = dbContext;
 		}
@@ -20,7 +20,7 @@ namespace Store.Service
 		public void DeleteProduct(int id)
 		{
 			var entity = GetProductById(id);
-			_dbContext.Set<Products>().Remove(entity);		
+			_dbContext.Set<Products>().Remove(entity);
 			_dbContext.SaveChanges();
 		}
 
@@ -29,9 +29,9 @@ namespace Store.Service
 			return _dbContext.Set<Products>().Find(id);
 		}
 
-		public IEnumerable<Products> GetAll()
+		public IEnumerable<Products> GetAllProducts()
 		{
-			throw new NotImplementedException();
+			return _dbContext.Products.ToList();
 		}
 	}
 }
