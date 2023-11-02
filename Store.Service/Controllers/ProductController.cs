@@ -8,24 +8,39 @@ namespace Store.Service.Controllers
 	[ApiController]
 	public class ProductController : ControllerBase
 	{
-		private IProductService _productsService;
-		public ProductController(IProductService productsService)
+		private IProductService _productService;
+		public ProductController(IProductService productService)
 		{
-			_productsService = productsService;
+			_productService = productService;
 		}
 		[HttpPost()]
-		[Route("api/[controller]/SaveProduct")]
-		public IActionResult SaveProduct(Products products)
+		[Route("AddProduct")]
+		public async Task<IActionResult> AddProduct(Products products)
 		{
-			_productsService.AddProduct(products);
+			await _productService.AddProduct(products);
 			return Ok();
 		}
 		[HttpPost()]
-		[Route("api/[controller]/DeleteProduct")]
-		public IActionResult DeleteProduct(int id)
+		[Route("DeleteProduct")]
+		public async Task<IActionResult> DeleteProduct(int id)
 		{
-			_productsService.DeleteProduct(id);
+			await _productService.DeleteProduct(id);
 			return Ok();
+		}
+		[HttpGet()]
+		[Route("GetAllProducts")]
+		public async Task<IActionResult> GetAllProducts()
+		{
+			var products = await _productService.GetAllProducts();
+			return Ok(products);
+		}
+
+		[HttpGet()]
+		[Route("GetProductById")]
+		public async Task<IActionResult> GetProductById(int id)
+		{
+			var products = await _productService.GetProductById(id);
+			return Ok(products);
 		}
 	}
 }

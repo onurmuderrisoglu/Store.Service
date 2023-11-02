@@ -11,27 +11,27 @@ namespace Store.Service
 			_dbContext = dbContext;
 		}
 
-		public void AddProduct(Products products)
+		public async Task AddProduct(Products products)
 		{
 			_dbContext.Add(products);
-			_dbContext.SaveChangesAsync();
+			await _dbContext.SaveChangesAsync();
 		}
 
-		public void DeleteProduct(int id)
+		public async Task DeleteProduct(int id)
 		{
-			var entity = GetProductById(id);
+			var entity = await GetProductById(id);
 			_dbContext.Set<Products>().Remove(entity);
 			_dbContext.SaveChanges();
 		}
 
-		private Products GetProductById(int id)
+		public async Task<IEnumerable<Products>> GetAllProducts()
 		{
-			return _dbContext.Set<Products>().Find(id);
+			return await _dbContext.Products.ToListAsync();
 		}
 
-		public IEnumerable<Products> GetAllProducts()
+		public async Task<Products> GetProductById(int id)
 		{
-			return _dbContext.Products.ToList();
-		}
+			return await _dbContext.Set<Products>().FindAsync(id);
+		}		
 	}
 }

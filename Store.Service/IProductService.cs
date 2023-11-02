@@ -4,8 +4,9 @@ namespace Store.Service
 {
 	public interface IProductService
 	{
-		IEnumerable<Products> GetAllProducts();
-		void DeleteProduct(int id);
-		void AddProduct(Products products);
+		Task<IEnumerable<Products>> GetAllProducts();
+		Task DeleteProduct(int id);
+		Task AddProduct(Products products);
+		Task<Products> GetProductById(int id);
 	}
 }
